@@ -600,7 +600,9 @@ iScroll.prototype = {
 		if (resetX == that.x && resetY == that.y) {
 			if (that.moved) {
 				that.moved = false;
-				if (that.options.onScrollEnd) that.options.onScrollEnd.call(that);		// Execute custom code on scroll end
+				if (that.options.onScrollEnd) {
+					that.options.onScrollEnd.call(that, that.scroller, that.x, that.y);		// Execute custom code on scroll end
+				}
 			}
 
 			if (that.hScrollbar && that.options.hideScrollbar) {
