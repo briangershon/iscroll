@@ -601,7 +601,7 @@ iScroll.prototype = {
 			if (that.moved) {
 				that.moved = false;
 				if (that.options.onScrollEnd) {
-					that.options.onScrollEnd.call(that, that.scroller, that.x, that.y);		// Execute custom code on scroll end
+					that.options.onScrollEnd.call(that, that, that.x, that.y);		// Execute custom code on scroll end
 				}
 			}
 
